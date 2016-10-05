@@ -3,7 +3,6 @@
  // the donations in order from lowest to highest
  // and in the original order they were received.
  #include <iostream>
- #include <fstream>
  using namespace std;
 
  // Function prototypes++++
@@ -15,9 +14,6 @@
  int main()
  {
  const int NUM_DONATIONS = 15; // Number of donations
- ofstream outputFile;
- 
- file.open("tugas2.txt");
 
  // An array containing the donation amounts.
  int donations[NUM_DONATIONS] = {};
