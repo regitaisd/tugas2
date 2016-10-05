@@ -1,26 +1,27 @@
-#include <iostream>
+// This program shows the donations made to the United Cause
+ // by the employees of CK Graphics, Inc. It displays
+ // the donations in order from lowest to highest
+ // and in the original order they were received.
+ #include <iostream>
  using namespace std;
 
- // Function prototypes
+ // Function prototypes++++
  void arrSelectSort(int *[], int);
  void showArray(const int [], int);
  void showArrPtr(int *[], int);
-
- int *nullptr = 0;
+ void DonationList (int []);
 
  int main()
  {
  const int NUM_DONATIONS = 15; // Number of donations
 
  // An array containing the donation amounts.
- int donations[NUM_DONATIONS] = { 5, 100, 5, 25, 10,
- 5, 25, 5, 5, 100,
- 10, 15, 10, 5, 10 };
+ int donations[NUM_DONATIONS] = {};
+ cout<<"Please input 15 numbers: \n";
+ DonationList (donations);
 
  // An array of pointers to int.
- int *arrPtr[NUM_DONATIONS] = { nullptr, nullptr, nullptr, nullptr, nullptr,
- nullptr, nullptr, nullptr, nullptr, nullptr,
- nullptr, nullptr, nullptr, nullptr, nullptr };
+ int *arrPtr[NUM_DONATIONS] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
  // Each element of arrPtr is a pointer to int. Make each
  // element point to an element in the donations array.
@@ -96,3 +97,9 @@
  cout << *(arr[count]) << " ";
  cout << endl;
  }
+ 
+ void DonationList(int donation[]){
+ for (int i = 0 ; i < 15 ; i++){
+  cin >> donation [i];
+ }
+}
