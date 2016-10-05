@@ -3,6 +3,7 @@
  // the donations in order from lowest to highest
  // and in the original order they were received.
  #include <iostream>
+ #include <fstream>
  using namespace std;
 
  // Function prototypes++++
@@ -14,6 +15,9 @@
  int main()
  {
  const int NUM_DONATIONS = 15; // Number of donations
+ ofstream outputFile;
+ 
+ file.open("tugas2.txt");
 
  // An array containing the donation amounts.
  int donations[NUM_DONATIONS] = {};
@@ -34,11 +38,15 @@
  // Display the donations using the array of pointers. This
  // will display them in sorted order.
  cout << "The donations, sorted in ascending order are: \n";
+ outputFile << "The donations, sorted in ascending order are: \n";
  showArrPtr(arrPtr, NUM_DONATIONS);
+ outputFile << showArrPtr(arrPtr, NUM_DONATIONS);
 
  // Display the donations in their original order.
  cout << "The donations, in their original order are: \n";
+ outputFile << "The donations, in their original order are: \n";
  showArray(donations, NUM_DONATIONS);
+ outputFile << showArray(donations, NUM_DONATIONS);
  return 0;
  }
 
